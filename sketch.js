@@ -10,14 +10,14 @@ function setup() {
   engine = Engine.create();
   world =engine.world;
 
-  bullet = new Box(100,300,40,40);
+  bullet = new Bullet(200,300,40,40);
 
-  box1 = new Base(300,100,400,5);
+  box1 = new Base(300,250,60,5);
 
-  box2 = new Box(60,240,10,10);
-  box3 = new Box(70,240,10,10);
-  box4 = new Box(80,240,10,10);
-  box5 = new Box(70,230,10,10);
+  box2 = new Box(290,150,12,12);
+  box3 = new Box(300,150,12,12);
+  box4 = new Box(310,150,12,12);
+  box5 = new Box(300,140,12,12);
 
   slingshot = new Slingshot(bullet.body,{x:100 ,y:300});
 

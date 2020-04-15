@@ -3,10 +3,11 @@ class Slingshot {
         var options ={
             bodyA: a,
             pointB: b,
-            lenght: 32,
+            length: 32,
             stiffness:0.03
         }
         this.c = Matter.Constraint.create(options)
+        this.e = b;
         this.d = World.add(world, this.c)
     }
     display(){
@@ -14,8 +15,9 @@ class Slingshot {
             push();
             stroke(0,0,0);
             strokeWeight(5);
-            line(this.c.bodyA.position.x,this.c.bodyA.position.y,this.d.x-10,this.d.y);
-            line(this.c.bodyA.position.x,this.c.bodyA.position.y,this.d.x+20,this.d.y);
+            line(this.c.bodyA.position.x,this.c.bodyA.position.y,this.e.x-10,this.e.y);
+            line(this.c.bodyA.position.x,this.c.bodyA.position.y,this.e.x+20,this.e.y);
+            console.log(this.e);
             pop()
         }
     }
